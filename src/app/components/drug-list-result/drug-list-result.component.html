@@ -1,0 +1,15 @@
+
+<div class="tableContainer">
+  <div class="row">
+    <div class="col"><label class="headerLabel">Id</label></div>
+    <div class="col"><label class="headerLabel">Name</label></div>
+    <div class="col"><label class="headerLabel">Description</label></div>
+  </div>
+  <ng-container *ngFor='let drugList of drugListCollection'>
+    <div class="row">
+        <div class="col"><label>{{ drugList.id }}</label></div>
+        <div class="col"><label>{{ drugList.name }}</label></div>
+        <div class="col"><label>{{ drugList.description }}</label></div>
+    </div> 
+  </ng-container>
+</div>  

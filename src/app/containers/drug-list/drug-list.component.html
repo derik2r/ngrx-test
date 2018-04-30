@@ -1,0 +1,8 @@
+<div class="pageTitle">Drug List</div>
+<app-drug-list-search-form
+    [searchTerms]="searchTerms"
+    (onSearch)="performSearch($event)"></app-drug-list-search-form>
+<br>
+<hr>
+<app-drug-list-result
+    [drugListCollection]="drugListCollection | async"></app-drug-list-result>

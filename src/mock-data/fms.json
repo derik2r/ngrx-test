@@ -1,0 +1,19 @@
+{
+    "drug-list": [
+      {
+        "id": 101, 
+        "name": "Drug List 1", 
+        "description":"Drug List 1 Description"
+      },
+      {
+        "id": 102, 
+        "name": "Drug List 2", 
+        "description": "Drug List 2 Description"
+      },
+      {
+        "id": 103, 
+        "name": "Drug List 3", 
+        "description": "Drug List 3 Description"
+      }
+    ]
+  }

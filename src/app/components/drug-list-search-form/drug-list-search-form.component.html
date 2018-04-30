@@ -1,0 +1,16 @@
+<form class="formContainer" [formGroup]='drugListSearchFormGroup'>
+  <div class="form-group">
+    <label for="drugListName" class="titleLabel">Name</label>
+    <input type="text" class="form-control" id="drugListName" formControlName="name" placeholder="Enter name">
+  </div>
+  <div class="form-group">
+      <label for="drugListDescriptionLabel" class="titleLabel">Description</label>
+      <input type="text" class="form-control" id="drugListDescriptionLabel" formControlName="description" placeholder="Enter description">    
+  </div>
+  <input 
+    id='searchButton' 
+    type='button' 
+    value='Search' 
+    (click)='handleSearch()'
+    class="btn btn-danger floatRight"/>
+</form>
