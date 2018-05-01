@@ -20,17 +20,19 @@ export class DrugListComponent implements OnInit {
   private searchTerms: Observable<string[]>;
   private drugListCollection: Observable<DrugList[]>;
   private resultsCount: Observable<number>;
+  private retrieveFlag: Observable<boolean>;
 
   constructor(private store: Store<fromRoot.AppState>) { 
-      this.searchTerms = store.select(state => state.drugList.searchTerms);
-      this.drugListCollection = store.select(state => state.drugList.searchResults);
-      this.resultsCount = store.select(state => state.drugList.resultsCount);
+      this.searchTerms = store.select(fromRoot.selectDrugListSearchTerms);
+      this.drugListCollection = store.select(fromRoot.selectDrugListResults);
+      this.resultsCount = store.select(fromRoot.selectDrugListResultsCount);
+      this.retrieveFlag = store.select(fromRoot.selectDrugListRetrieveFlag);
     }
 
   ngOnInit() {
   }
 
   performSearch(searchTermsFromChildForm: string[]): void {
-    this.store.dispatch(new DrugListActions.DrugListStoreSearchCriteria(searchTermsFromChildForm))
+    this.store.dispatch(new DrugListActions.DrugListStoreSearchCriteria(searchTermsFromChildForm));
   }
 }

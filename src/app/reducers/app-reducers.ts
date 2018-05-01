@@ -12,3 +12,19 @@ export const reducers = {
     // list all other sub reducers here...
 };
 
+export function selectDrugListResults(state: AppState) {
+    return state.drugList.searchResults;
+}
+
+export function selectDrugListSearchTerms(state: AppState) {
+    return state.drugList.searchTerms;
+}
+
+export function selectDrugListResultsCount(state: AppState) {
+    return state.drugList.resultsCount;
+}
+
+export function selectDrugListRetrieveFlag(state: AppState) {
+    return state.drugList.retrieveFlag;
+}
+
