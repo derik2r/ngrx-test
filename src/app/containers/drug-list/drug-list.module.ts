@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DrugListComponent } from './drug-list.component';
 import { DrugListResultComponent } from '../../components/drug-list-result/drug-list-result.component';
 import { DrugListSearchFormComponent } from '../../components/drug-list-search-form/drug-list-search-form.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { DrugListSearchFormComponent } from '../../components/drug-list-search-f
       RouterModule.forChild([
         { path: '', component: DrugListComponent }  
       ]),
-      ReactiveFormsModule  
+      ReactiveFormsModule,
+      SharedModule  
     ],
     exports: [],
     declarations: [ 

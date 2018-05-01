@@ -9,7 +9,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './reducers/app-reducers';
 
 import { AppRouterModule } from './app-router.module';
-import { SharedModule } from './containers/shared/shared.module';
 
 import { AppComponent } from './app.component';
 

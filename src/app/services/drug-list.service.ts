@@ -13,7 +13,7 @@ export class DrugListService {
 
     }
 
-    getDrugList(): Observable<DrugList[]> {
+    getDrugList(searchTermsFromChildForm: string[]): Observable<DrugList[]> {
         return this.http.get<DrugList[]>(this.drugListUrl);
     }
 }
