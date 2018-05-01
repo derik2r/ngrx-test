@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { 
   NgModule,
   NO_ERRORS_SCHEMA } from '@angular/core';
+  import { EffectsModule } from '@ngrx/effects';
 import { MDBBootstrapModule } from 'angular-bootstrap-md'; 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -13,6 +14,7 @@ import { AppRouterModule } from './app-router.module';
 import { AppComponent } from './app.component';
 
 import { DrugListService } from './services';
+import { DrugListEffects } from './effects';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { DrugListService } from './services';
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
     StoreModule.forRoot( reducers ),
-    StoreDevtoolsModule.instrument({ maxAge: 50 })
+    StoreDevtoolsModule.instrument({ maxAge: 50 }),
+    EffectsModule.forRoot( [DrugListEffects] )
   ],
   providers: [ DrugListService ],
   schemas: [ NO_ERRORS_SCHEMA ],

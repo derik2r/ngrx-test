@@ -6,12 +6,14 @@ export interface DrugListState {
     searchTerms: string[];
     searchResults: DrugList[];
     resultsCount: number;
+    retrieveFlag: boolean;
 }
 
 const initialState: DrugListState = {
     searchTerms: [],
     searchResults: [],
-    resultsCount: 0
+    resultsCount: 0,
+    retrieveFlag: false
 };
 
 export function reducer(state = initialState, action: DrugListActions.All): DrugListState {
@@ -32,6 +34,12 @@ export function reducer(state = initialState, action: DrugListActions.All): Drug
             return {
                 ...state,
                 resultsCount: action.payload
+            }
+        }
+        case DrugListActions.DRUG_LIST_STORE_RETRIEVE_FLAG: {
+            return {
+                ...state,
+                retrieveFlag: action.payload
             }
         }
         default: {
