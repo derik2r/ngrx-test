@@ -1,1 +1,1 @@
-export * from './drug-list.effects';
+export * from './wheel-set.effects';

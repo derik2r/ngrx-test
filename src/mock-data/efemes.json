@@ -1,19 +1,19 @@
 {
-    "drug-list": [
+    "wheel-set": [
       {
         "id": 101, 
-        "name": "Drug List 1", 
-        "description":"Drug List 1 Description"
+        "name": "Wheel Set 1", 
+        "description":"Wheel Set 1 Description"
       },
       {
         "id": 102, 
-        "name": "Drug List 2", 
-        "description": "Drug List 2 Description"
+        "name": "Wheel Set 2", 
+        "description": "Wheel Set 2 Description"
       },
       {
         "id": 103, 
-        "name": "Drug List 3", 
-        "description": "Drug List 3 Description"
+        "name": "Wheel Set 3", 
+        "description": "Wheel Set 3 Description"
       }
     ]
   }

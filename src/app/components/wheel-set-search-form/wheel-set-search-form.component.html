@@ -1,0 +1,16 @@
+<form class="formContainer" [formGroup]='wheelSetSearchFormGroup'>
+  <div class="form-group">
+    <label for="wheelSetName" class="titleLabel">Name</label>
+    <input type="text" class="form-control" id="wheelSetName" formControlName="name" placeholder="Enter name">
+  </div>
+  <div class="form-group">
+      <label for="wheelSetDescriptionLabel" class="titleLabel">Description</label>
+      <input type="text" class="form-control" id="wheelSetDescriptionLabel" formControlName="description" placeholder="Enter description">    
+  </div>
+  <input 
+    id='searchButton' 
+    type='button' 
+    value='Search' 
+    (click)='handleSearch()'
+    class="btn btn-danger floatRight"/>
+</form>

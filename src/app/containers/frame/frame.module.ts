@@ -3,18 +3,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { FormularyComponent } from './formulary.component';
+import { FrameComponent } from './frame.component';
 
 @NgModule({
     imports: [
         CommonModule,
         RouterModule.forChild([
-          { path: '', component: FormularyComponent }  
+          { path: '', component: FrameComponent }  
         ]),
         ReactiveFormsModule  
     ],
     exports: [],
-    declarations: [ FormularyComponent ],
+    declarations: [ FrameComponent ],
     providers: [],
 })
-export class FormularyModule { }
+export class FrameModule { }

@@ -1,0 +1,10 @@
+<div class="pageTitle">Wheel Set</div>
+<app-wheel-set-search-form
+    [searchTerms]="searchTerms | async"
+    (onSearch)="performSearch($event)"></app-wheel-set-search-form>
+<br>
+<hr>
+<app-message-area [resultsCount]="resultsCount | async"></app-message-area>
+<app-wheel-set-result
+    [wheelSetCollection]="wheelSetCollection | async"></app-wheel-set-result>
+    

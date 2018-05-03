@@ -1,2 +1,2 @@
-export { DrugListService } from './drug-list.service';
+export { WheelSetService } from './wheel-set.service';
  

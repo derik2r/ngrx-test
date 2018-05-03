@@ -1,42 +1,42 @@
-import { DrugList } from '../models';
-import * as DrugListActions from '../actions';
+import { WheelSet } from '../models';
+import * as WheelSetActions from '../actions';
 
 
-export interface DrugListState {
+export interface WheelSetState {
     searchTerms: string[];
-    searchResults: DrugList[];
+    searchResults: WheelSet[];
     resultsCount: number;
     retrieveFlag: boolean;
 }
 
-const initialState: DrugListState = {
+const initialState: WheelSetState = {
     searchTerms: [],
     searchResults: [],
     resultsCount: 0,
     retrieveFlag: false
 };
 
-export function reducer(state = initialState, action: DrugListActions.All): DrugListState {
+export function reducer(state = initialState, action: WheelSetActions.All): WheelSetState {
     switch(action.type) {
-        case DrugListActions.DRUG_LIST_STORE_SEARCH_CRITERIA: {
+        case WheelSetActions.WHEEL_SET_STORE_SEARCH_CRITERIA: {
             return {
                 ...state,
                 searchTerms: action.payload
             };
         }
-        case DrugListActions.DRUG_LIST_STORE_SEARCH_RESULTS: {
+        case WheelSetActions.WHEEL_SET_STORE_SEARCH_RESULTS: {
             return {
                 ...state,
                 searchResults: action.payload
             }
         }
-        case DrugListActions.DRUG_LIST_STORE_RESULTS_COUNT: {
+        case WheelSetActions.WHEEL_SET_STORE_RESULTS_COUNT: {
             return {
                 ...state,
                 resultsCount: action.payload
             }
         }
-        case DrugListActions.DRUG_LIST_STORE_RETRIEVE_FLAG: {
+        case WheelSetActions.WHEEL_SET_STORE_RETRIEVE_FLAG: {
             return {
                 ...state,
                 retrieveFlag: action.payload

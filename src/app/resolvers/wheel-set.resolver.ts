@@ -3,23 +3,23 @@ import { Injectable } from "@angular/core";
 import { Resolve } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
-import { DrugList } from '../models'; 
-import * as DrugListActions from '../actions/drug-list.actions';
+import { WheelSet } from '../models'; 
+import * as WheelSetActions from '../actions/wheel-set.actions';
 import * as fromRoot from '../reducers/app-reducers';
 
 
 @Injectable()
-export class DrugListResolver implements Resolve<DrugList> {
+export class WheelSetResolver implements Resolve<WheelSet> {
 
     constructor(private store: Store<fromRoot.AppState>) {}
 
-    resolve(): Observable<DrugList> {
+    resolve(): Observable<WheelSet> {
 
         // TODO: Implement
         return null;
     }
 
-    initializeDrugList(): void {
-        this.store.dispatch(new DrugListActions.DrugListStoreSearchCriteria([]));
+    initializeWheelSet(): void {
+        this.store.dispatch(new WheelSetActions.WheelSetStoreSearchCriteria([]));
     }
 }

@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router'; 
 
 export const routes: Routes = [
-  { path: 'formulary', loadChildren: 'app/containers/formulary/formulary.module#FormularyModule'},
-  { path: '', redirectTo: 'formulary', pathMatch: 'full' },
-  { path: 'drug-list', loadChildren: 'app/containers/drug-list/drug-list.module#DrugListModule'},
+  { path: 'frame', loadChildren: 'app/containers/frame/frame.module#FrameModule'},
+  { path: '', redirectTo: 'frame', pathMatch: 'full' },
+  { path: 'wheel-set', loadChildren: 'app/containers/wheel-set/wheel-set.module#WheelSetModule'},
 ];
 
 @NgModule({

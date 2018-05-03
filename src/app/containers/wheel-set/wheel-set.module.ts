@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { DrugListComponent } from './drug-list.component';
-import { DrugListResultComponent } from '../../components/drug-list-result/drug-list-result.component';
-import { DrugListSearchFormComponent } from '../../components/drug-list-search-form/drug-list-search-form.component';
+import { WheelSetComponent } from './wheel-set.component';
+import { WheelSetResultComponent } from '../../components/wheel-set-result/wheel-set-result.component';
+import { WheelSetSearchFormComponent } from '../../components/wheel-set-search-form/wheel-set-search-form.component';
 import { SharedModule } from '../shared/shared.module';
 
 
@@ -13,17 +13,17 @@ import { SharedModule } from '../shared/shared.module';
     imports: [
       CommonModule,
       RouterModule.forChild([
-        { path: '', component: DrugListComponent }  
+        { path: '', component: WheelSetComponent }  
       ]),
       ReactiveFormsModule,
       SharedModule  
     ],
     exports: [],
     declarations: [ 
-      DrugListComponent,
-      DrugListResultComponent,
-      DrugListSearchFormComponent
+      WheelSetComponent,
+      WheelSetResultComponent,
+      WheelSetSearchFormComponent
     ],
     providers: [],
 })
-export class DrugListModule { }
+export class WheelSetModule { }

@@ -1,1 +1,1 @@
-export * from './drug-list.model';
+export * from './wheel-set.model';

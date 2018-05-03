@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DrugListSearchFormComponent } from './drug-list-search-form.component';
+import { WheelSetComponent } from './wheel-set.component';
 
-describe('DrugListSearchFormComponent', () => {
-  let component: DrugListSearchFormComponent;
-  let fixture: ComponentFixture<DrugListSearchFormComponent>;
+describe('WheelSetComponent', () => {
+  let component: WheelSetComponent;
+  let fixture: ComponentFixture<WheelSetComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DrugListSearchFormComponent ]
+      declarations: [ WheelSetComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DrugListSearchFormComponent);
+    fixture = TestBed.createComponent(WheelSetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

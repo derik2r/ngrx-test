@@ -1,30 +1,30 @@
-import * as fromDrugList from './drug-list.reducer';
+import * as fromWheelSet from './wheel-set.reducer';
 
 // Model the application level state (combining all sub states)
 export interface AppState {
-    drugList: fromDrugList.DrugListState;
+    wheelSet: fromWheelSet.WheelSetState;
     // list all other sub states here...
 }
 
 // Combine all sub reducers 
 export const reducers = {
-    drugList: fromDrugList.reducer,
+    wheelSet: fromWheelSet.reducer,
     // list all other sub reducers here...
 };
 
-export function selectDrugListResults(state: AppState) {
-    return state.drugList.searchResults;
+export function selectWheelSetResults(state: AppState) {
+    return state.wheelSet.searchResults;
 }
 
-export function selectDrugListSearchTerms(state: AppState) {
-    return state.drugList.searchTerms;
+export function selectWheelSetSearchTerms(state: AppState) {
+    return state.wheelSet.searchTerms;
 }
 
-export function selectDrugListResultsCount(state: AppState) {
-    return state.drugList.resultsCount;
+export function selectWheelSetResultsCount(state: AppState) {
+    return state.wheelSet.resultsCount;
 }
 
-export function selectDrugListRetrieveFlag(state: AppState) {
-    return state.drugList.retrieveFlag;
+export function selectWheelSetRetrieveFlag(state: AppState) {
+    return state.wheelSet.retrieveFlag;
 }
 

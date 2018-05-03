@@ -13,8 +13,8 @@ import { AppRouterModule } from './app-router.module';
 
 import { AppComponent } from './app.component';
 
-import { DrugListService } from './services';
-import { DrugListEffects } from './effects';
+import { WheelSetService } from './services';
+import { WheelSetEffects } from './effects';
 
 
 @NgModule({
@@ -28,9 +28,9 @@ import { DrugListEffects } from './effects';
     MDBBootstrapModule.forRoot(),
     StoreModule.forRoot( reducers ),
     StoreDevtoolsModule.instrument({ maxAge: 50 }),
-    EffectsModule.forRoot( [DrugListEffects] )
+    EffectsModule.forRoot( [WheelSetEffects] )
   ],
-  providers: [ DrugListService ],
+  providers: [ WheelSetService ],
   schemas: [ NO_ERRORS_SCHEMA ],
   bootstrap: [ AppComponent ]
 })
